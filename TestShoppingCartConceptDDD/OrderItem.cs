@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestShoppingCartConceptDDD.ValueObjects;
 
 namespace TestShoppingCartConceptDDD
 {
@@ -10,16 +11,15 @@ namespace TestShoppingCartConceptDDD
     {
         public Guid ProductId { get; private set; }
         public int Quantity { get; private set; }
-        public decimal UnitPrice { get; private set; }
+        public Money UnitPrice { get; private set; }
 
-        public OrderItem(Guid productId, int quantity, decimal unitPrice)
+        public OrderItem(Guid productId, int quantity, Money unitPrice)
         {
             if (quantity <= 0) throw new ArgumentException("Quantity must be greater than zero.");
-            if (unitPrice <= 0) throw new ArgumentException("Unit price must be greater than zero.");
 
             ProductId = productId;
             Quantity = quantity;
-            UnitPrice = unitPrice;
+            UnitPrice = unitPrice ?? throw new ArgumentNullException(nameof(unitPrice));
         }
 
         public void UpdateQuantity(int quantity)
@@ -28,9 +28,9 @@ namespace TestShoppingCartConceptDDD
             Quantity = quantity;
         }
 
-        public decimal GetTotal()
+        public Money GetTotal()
         {
-            return Quantity * UnitPrice;
+            return new Money(Quantity * UnitPrice.Amount, UnitPrice.Currency);
         }
     }
 }
