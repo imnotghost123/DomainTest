@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestShoppingCartConceptDDD", "TestShoppingCartConceptDDD\TestShoppingCartConceptDDD.csproj", "{13E93FAF-AB31-483B-8857-80B056BAF41B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDomainSingle", "TestDomainSingle\TestDomainSingle.csproj", "{8B0298AC-CAEA-46C7-AE51-1CFC7544416E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestDomainSingle", "TestDomainSingle\TestDomainSingle.csproj", "{8B0298AC-CAEA-46C7-AE51-1CFC7544416E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD", "DDD\DDD.csproj", "{C4B4D6F6-2F87-4C0E-B9B0-8F241568124D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{8B0298AC-CAEA-46C7-AE51-1CFC7544416E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B0298AC-CAEA-46C7-AE51-1CFC7544416E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B0298AC-CAEA-46C7-AE51-1CFC7544416E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4B4D6F6-2F87-4C0E-B9B0-8F241568124D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4B4D6F6-2F87-4C0E-B9B0-8F241568124D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4B4D6F6-2F87-4C0E-B9B0-8F241568124D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4B4D6F6-2F87-4C0E-B9B0-8F241568124D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
